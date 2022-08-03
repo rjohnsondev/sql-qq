@@ -2,10 +2,10 @@
 let old_syntax = b:current_syntax
 unlet b:current_syntax
 
-syn include @sql syntax/sql.vim
+syn include @pgsql syntax/pgsql.vim
 unlet b:current_syntax
 
-syn region sqlBlock matchgroup=quasiQuote start=/\[\$\?sql|/       end=/|\]/ contains=@sql
+syn region sqlBlock matchgroup=quasiQuote start=/\[\$\?sql|/ end=/|\]/ contains=@pgsql keepend
 
 hi def link quasiQuote Underlined
 
